@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// let i = 1;
+			// while (i <= 100) {
+			// 	document.write(`是：${i}<br>`);
+			// 	i++;
+			// }
+			//2.计算累加和
+			// let j = 1;
+			// let sum = 0;
+			// while (j <= 100) {
+			// 	sum = sum + j;
+			// 	j++;
+			// }
+			// document.write(`1-100累加和是${sum}`);
+			//3.计算1-100的所有偶数和
+			let i = 1;
+			let sum = 0;
+			while (i <= 100) {
+				if (i % 2 === 0) {
+					sum = sum + i;
+				}
+				i++;
+			}
+			document.write(`1~100内的偶数和是${sum}`);
+		</script>
+	</body>
+</html>
