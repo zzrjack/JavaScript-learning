@@ -24,9 +24,15 @@
 			// for (let i = 1; i <= 5; i++) {
 			// 	document.write("❤");
 			// }
-			// 4.循环数组
-			let a = ["关羽", "张飞", "赵云", "黄忠", "马超"];
-			for (i = 0; i <= 4; i++) {
+			// 4.循环数组/以及退出循环
+			let a = ["关羽", "张飞", "赵云", "黄忠", "马超", "测试"];
+			for (i = 0; i <= a.length - 1; i++) {
+				// if (i === 3) {
+				// 	continue;
+				// }
+				if (i === 2) {
+					break;
+				}
 				document.write(`五虎上将之${a[i]}<br>`);
 			}
 		</script>

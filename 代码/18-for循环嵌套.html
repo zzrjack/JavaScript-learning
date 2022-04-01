@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.div {
+				display: inline-block;
+				height: 25px;
+				line-height: 25px;
+				margin: 5px;
+				background-color: cyan;
+				padding: 0 10px;
+				border: 1px solid blue;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			/* 			//外部循环打印天数
+			let array = [1, 2, 3, 4];
+			let array1 = [1, 2, 3, 4, 5, 6];
+			for (let index = 0; index < array.length; index++) {
+				const element = array[index];
+				document.write(`第${element}天</br>`);
+				//嵌套内部循环学了多少个单词
+				for (let index = 0; index < array1.length; index++) {
+					const element = array1[index];
+					document.write(`今天记住了第${element}个单词</br>`);
+				}
+			} */
+			//打印五行五列星星
+			//外部for循环控制行
+			/* 			let array = ["⭐"];
+			for (let index = 0; index < 5; index++) {
+				for (let index = 0; index < 5; index++) {
+					document.write(`${array}`);
+				} //内部循环控制列
+				document.write("</br>");
+			} */
+			//打印倒三角星星
+			//i 为行 j为列
+			/* for (let i = 0; i < 5; i++) {
+				for (let j = 0; j <= i; j++) {
+					document.write(`⭐`);
+				}
+				document.write("</br>");
+			} */
+			//99乘法表
+			for (let i = 1; i <= 9; i++) {
+				for (let j = 1; j <= i; j++) {
+					document.write(`<div class="div">
+						${j}×${i}=${i * j}
+						</div>`);
+				}
+				document.write("</br>");
+			}
+		</script>
+	</body>
+</html>
