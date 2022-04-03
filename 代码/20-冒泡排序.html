@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			//冒泡排序(利用双循环第一个循环为排序次数为数组长度减1 第二个循环为冒泡操作注意：第n次排序完成后第n个数就不用参加比较了 )
+			//由小到大
+			let arry = [6, 3, 8, 5, 4, 7, 9, 1, 2];
+			for (j = 0; j < arry.length - 1; j++) {
+				for (i = 0; i < arry.length - j - 1; i++) {
+					let temp = [];
+					if (arry[i] > arry[i + 1]) {
+						temp = arry[i];
+						arry[i] = arry[i + 1];
+						arry[i + 1] = temp;
+					}
+				}
+			}
+			console.log(arry);
+			//由大到小
+			// let arry = [6, 3, 8, 5, 4, 7, 9, 1, 2];
+			// // for (j = 0; j < arry.length; j++) {
+			// // 	for (i = 0; i < arry.length - j - 1; i++) {
+			// // 		if (arry[i] < arry[i + 1]) {
+			// // 			let temp = [];
+			// // 			temp = arry[i];
+			// // 			arry[i] = arry[i + 1];
+			// // 			arry[i + 1] = temp;
+			// // 		}
+			// // 	}
+			// // }
+			// // console.log(arry);
+		</script>
+	</body>
+</html>
