@@ -1,0 +1,44 @@
+三点运算符作为剩余参数-理解为把剩余的元素集合在一起
+
+	//这里的10 20 30 分别传到函数作为形参，形参只有a和...rest,那么...rest其实就是把剩余的20 30集合一起接收了，变为了[20,30]
+	function func2(a, ...rest) { 
+	    console.log(a); //10
+	    console.log(rest); //[20,30]
+	    console.log(rest[0], rest[1], rest[2]); //20 30 undefined
+	}
+	func2(10, 20, 30);
+二、三点运算符作为拓展运算符-也就是把元素拆开
+
+	let arr = [10, 20, 30];
+	function func2(a, b, c) {
+	    console.log(a, b, c); //10 20 30 
+	}
+	func2(...arr); //这个...arr相当于把数组的元素拓展出来，也就是拆了数组，变为10 20 30传给函数的a b c分别接收
+	
+
+三、三点运算符还可以做什么
+（1）合并数组
+
+
+	let arr1 = [10, 20];
+	let arr2 = [30, 40];
+	let new_arr = [...arr1, ...arr2];
+	console.log(new_arr); //[ 10, 20, 30, 40 ]
+
+（2）合并对象–如果是2个对象合并，属性有相同的，后面的会覆盖前面的
+
+
+	let obj1 = {
+	    name: "nodejs",
+	    age: 111,
+	    email: "123@qq.com"
+	}
+	let obj2 = {
+	    name: "js",
+	    age: 222,
+	    email: "node@qq.com"
+	}
+	// 
+	let new_obj = { ...obj1, ...obj2 };
+	console.log(new_obj); //{ name: 'js', age: 222, email: 'node@qq.com' }
+合并对象和合并数组的区别就是在于一个是{ }，一个是[ ]
