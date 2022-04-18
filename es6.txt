@@ -42,3 +42,12 @@
 	let new_obj = { ...obj1, ...obj2 };
 	console.log(new_obj); //{ name: 'js', age: 222, email: 'node@qq.com' }
 合并对象和合并数组的区别就是在于一个是{ }，一个是[ ]
+四、arguements  永远不要命名参数arguments。这将优先于arguments赋予每个函数范围的对象。
+arguments 是是JavaScript里的一个内置对象，它很古怪，也经常被人所忽视，但实际上是很重要的。所有主要的js函数库都利用了arguments对象。所以agruments对象对于javascript程序员来说是必需熟悉的。在javascript函数体内，标识符arguments具有特殊含义。它是调用对象的一个特殊属性，用来引用Arguments对象。Arugments对象就像数组，注意这里只是像并不是哈。
+
+javascript函数体内，arguments像数组(并不是真的数组，是一个Arguments对象，再次强调)一样，有length属性，可以代表传给函数的参数的个数。
+
+javascript中Arguments对象是函数的实际参数，arguments对象的长度是由实参个数而不是形参个数决定的。形参是函数内部重新开辟内存空间存储的变量，但是其与arguments对象内存空间并不重叠。
+
+js不会主动为你判断你到底给函数传了多少个参数，如果你多传了，多余的部分就没有被使用，如果你少传了，那么没传的参数值就是undefined.所以我们可以借助arguments的length属性来检测调用函数时是否使用了正确数目的实际参数，因为javascript是不会为你做这些事的
+
