@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function fn(x, y) {
+				let sum = x + y;
+				let jian = x - y;
+				// return只能返回一个值,利用数组返回多个值
+				return [sum, jian];
+			}
+			let re = fn(1, 2);
+			document.write(`相加后的结果${re[0]},相减的结果${re[1]}`);
+		</script>
+	</body>
+</html>

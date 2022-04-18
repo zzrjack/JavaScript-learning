@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				display: flex;
+				width: 700px;
+				height: 300px;
+				border-left: 1px solid pink;
+				border-bottom: 1px solid pink;
+				margin: 50px auto;
+				/*  justify-content: space-around;
+			运用在父级元素上
+			第一个子元素距离左边的距离==最后一个子元素距离右边的距离
+			除第一个子元素和最后一个子元素外,第2个,第3个...一直到倒数第二个子元素，这些子元素距离左右两边的间距都是相等
+			巧记：around 是四周，说明四周是有间距的。
+			 */
+				justify-content: space-around;
+				/* flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴（纵轴）起始边界。
+        flex-end：弹性盒子元素的侧轴（纵轴）结束位置的边界紧靠住该行的侧轴（纵轴）结束边界。
+        center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+        baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+        stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。 */
+				align-items: flex-end;
+				text-align: center;
+			}
+
+			.box > div {
+				display: flex;
+				width: 50px;
+				background-color: pink;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.box div span {
+				margin-top: -20px;
+			}
+
+			.box div h4 {
+				margin-bottom: -35px;
+				width: 70px;
+				margin-left: -10px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			// 利用循环弹出四次输入框，得到4个数据，放到数组里面
+			let arr = [];
+			for (let i = 1; i <= 4; i++) {
+				// prompt(`请输入第${i}季度的数据`)
+				arr.push(prompt(`请输入第${i}季度的数据`));
+			}
+			console.log(arr);
+			//渲染循环的是柱子高度
+			document.write(`<div class="box">`);
+			for (let i = 0; i < arr.length; i++) {
+				document.write(`
+          <div style="height: ${arr[i]}px">
+				  <span>${arr[i]}</span>
+				  <h4>第${i + 1}季度</h4>
+			    </div>`);
+			}
+			document.write(`</div>`);
+		</script>
+	</body>
+</html>
