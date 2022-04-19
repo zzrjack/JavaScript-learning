@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			table {
+				width: 600px;
+				text-align: center;
+			}
+
+			table,
+			th,
+			td {
+				border: 1px solid #ccc;
+				border-collapse: collapse;
+			}
+
+			caption {
+				font-size: 18px;
+				margin-bottom: 10px;
+				font-weight: 700;
+			}
+
+			tr {
+				height: 40px;
+				cursor: pointer;
+			}
+
+			table tr:nth-child(1) {
+				background-color: #ddd;
+			}
+
+			table tr:not(:first-child):hover {
+				background-color: #eee;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			let student = [
+				{ name: "小明", age: 18, gender: "男", hometown: "河北省" },
+				{ name: "小红", age: 18, gender: "女", hometown: "河南省" },
+				{ name: "小刚", age: 20, gender: "男", hometown: "山西省" },
+				{ name: "小丽", age: 19, gender: "女", hometown: "北京省" },
+				{ name: "小媛", age: 21, gender: "女", hometown: "四川省" },
+			];
+			//得到小媛名字
+			//student[4];
+			//遍历数组
+			// for (let i = 0; i < student.length; i++) {
+			// 	console.log(student[i].name);
+			// }
+			//打印 表格的头部和尾部
+			document.write(
+				`<table>
+						         <caption>学生列表</caption>
+						         <tr>
+						             <th>序号</th>
+						             <th>姓名</th>
+						             <th>年龄</th>
+						             <th>性别</th>
+						             <th>家乡</th>
+						         </tr>`
+			);
+			//遍历行数
+			for (let i = 0; i < student.length; i++) {
+				document.write(
+					`<tr>
+									<td>${i + 1}</td>
+									<td>${student[i].name}</td>
+									<td>${student[i].age}</td>
+									<td>${student[i].gender}</td>
+									<td>${student[i].hometown}</td>
+								</tr>`
+				);
+			}
+			// 尾部
+			document.write(`
+			</table>
+			`);
+		</script>
+	</body>
+</html>
