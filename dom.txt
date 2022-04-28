@@ -1,0 +1,35 @@
+一、获取DOM对象
+querySelector('css选择器') 获取第一个元素
+querySelectorall('css选择器集合')  获取多个元素   伪数组
+				  通过遍历的方式，获取里面的每一个dom对象
+
+getElementById('id')      获取一个元素id为xxx
+getElementByTagName('标签')	获取页面所有这个标签xxx
+getElementByClassName('类名 ')	获取页面所有类名为xxx
+二、设置/修改DOM元素内容
+docume.write()  会被解析 只能在</body>前
+对象.innerText属性      将文本内容添加更新到任意标签位置，但文本中的标签不会被解析
+对象.innerHtml属性
+对象.属性=值
+
+
+className操作css
+元素.className='类名'  容易覆盖
+元素.classList.add('类名') 追加一个类
+			 .remove('类名')	删除一个类
+			 .toggle('类名')	切换一个类
+
+三、设置修改表单属性
+本质是将表单类型转换为文本框
+获取：DOM对象.属性名
+设置：DOM对象.属性名=新值
+设置表单元素属性：
+	添加就有，移除就没有，一律使用布尔值表示，如果为ture代表添加
+	比如：disabled、checked、selected 
+	例如，btn.disabled=false
+四、定时器-间歇函数
+开启定时器
+	setInterval(函数,间隔时间)
+let 变量名 = setInterval(函数，间隔时间)
+关闭定时器
+	clearInterval	
