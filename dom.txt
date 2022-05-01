@@ -50,3 +50,22 @@ let 变量名 = setInterval(函数，间隔时间)
 	事件源：dom元素被事件触发，需要获取dom元素
 	事件：用什么方式触发，比如鼠标点击click、鼠标经过mouseover等
 	事件调用的函数：要做什么事
+
+
+六、事件类型
+	鼠标事件：鼠标触发：
+	click 点击
+	mouseenter 鼠标经过
+	mouseleave 鼠标离开
+	
+	焦点事件：表单获得光标
+	focus 获得焦点
+	blur 失去焦点
+
+	键盘事件：键盘触发
+	keydown 键盘按下触发
+	keyup 键盘抬起触发
+	
+	文本事件：表单输入触发
+	input 用户输入事件
+	
