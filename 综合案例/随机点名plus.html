@@ -17,20 +17,20 @@
 		<div></div>
 		<button>点击点名</button>
 		<script>
-			let box = document.querySelector("div");
-			let btn = document.querySelector("button");
+			let box = document.querySelector('div');
+			let btn = document.querySelector('button');
 			getRandom = (min, max) => {
 				return Math.floor(Math.random() * (max - min + 1)) + min;
 			};
-			let arr = ["赵云", "黄忠", "关羽", "张飞", "马超", "刘备", "曹操", "孙权"];
+			let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', '孙权'];
 			//事件监听
-			btn.addEventListener("click", function () {
+			btn.addEventListener('click', function () {
 				let random = getRandom(0, arr.length - 1);
 				box.innerHTML = arr[random];
 				arr.splice(random, 1);
 				if (arr.length === 1) {
 					btn.disabled = true;
-					btn.innerHTML = "点名完成";
+					btn.innerHTML = '点名完成';
 				}
 			});
 		</script>
