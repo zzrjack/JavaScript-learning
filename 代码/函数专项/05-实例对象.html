@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// 构造函数
+			function Person() {
+				// 构造函数内部的 this 就是实例对象
+
+				// 实例对象中动态添加属性
+				this.name = '小明';
+				// 实例对象动态添加方法
+				this.sayHi = function () {
+					console.log('大家好~');
+				};
+			}
+
+			// 实例化，p1 是实例对象
+			// p1 实际就是 构造函数内部的 this
+			let p1 = new Person();
+
+			console.log(p1);
+			console.log(p1.name); // 访问实例属性
+			p1.sayHi(); // 调用实例方法
+		</script>
+	</body>
+</html>
