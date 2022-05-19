@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			/* 			let arr = ['a', 'b', 'a', 'c', 'd', 'a', 'b', 'e', 'e', 'f'];
+			let newArr = [];
+			arr.forEach((i) => {
+				if (newArr.indexOf(i) == -1) newArr.push(i);
+			});
+			console.log(newArr); */
+			let arr = [
+				[23, 66, 33, 16],
+				[19, 21, 49, 66, 123, 36],
+				[78, 37, 89, 86],
+			];
+			let max = arr[0][0];
+			let sum = 0;
+			let count = 0;
+			arr.forEach((i) => {
+				i.forEach((j) => {
+					sum = sum + j;
+					count++;
+				});
+			});
+			let avg = sum / count;
+			console.log(avg);
+			arr.forEach((i) => {
+				i.forEach((j) => {
+					if (j > max) {
+						max = j;
+					}
+				});
+			});
+			console.log(max);
+		</script>
+	</body>
+</html>
