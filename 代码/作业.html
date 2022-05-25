@@ -42,7 +42,7 @@
 			//截取祖国
 			let str1 = str.substring(str.indexOf('祖'), str.indexOf('国') + 1);
 			console.log(str1); */
-			Array.prototype.sum = function () {
+			/* 			Array.prototype.sum = function () {
 				let sum = 0;
 				for (let i = 0; i < this.length; i++) {
 					sum += this[i];
@@ -51,7 +51,32 @@
 			};
 			let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 			console.log(arr1.sum());
-			console.log(arr1);
+			console.log(arr1); */
+			//求数字出现的次数谁最多
+			let str = '132642343739373635384628633124';
+			//用对象保存字符以及字符次数
+			let obj = {
+				//字符当做键，次数当作值
+			};
+			//如果对象中有这个键，就让值＋1，如果没有这个键 就添加这个键初始值为1
+			for (let i = 0; i < str.length; i++) {
+				const element = str[i];
+				if (obj[element]) {
+					obj[element]++;
+				} else {
+					obj[element] = 1;
+				}
+			}
+			console.log(obj);
+			let max = 1;
+			let count = obj['1'];
+			for (let key in obj) {
+				if (count < obj[key]) {
+					count = obj[key];
+					max = key;
+				}
+			}
+			console.log(max, count);
 		</script>
 	</body>
 </html>
